@@ -1,0 +1,149 @@
+/* Обновленный modern-style.css */ 
+
+* { 
+  box-sizing: border-box; 
+} 
+ 
+html, body { 
+  font-family: 'Open Sans', Arial, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  height: 100%; 
+  line-height: 1.6; 
+  color: #333; 
+  background-color: #fafafa; 
+} 
+ 
+body { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  min-height: 100vh; 
+} 
+ 
+header { 
+  background-color: #333; 
+  color: #fff; 
+  padding: 20px 40px; 
+  text-align: center; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+} 
+ 
+header h1 { 
+  margin: 0; 
+  font-size: 24px; 
+  letter-spacing: 1px; 
+} 
+ 
+main { 
+  display: flex; 
+  flex-grow: 1; 
+  padding-top: 30px; 
+} 
+
+.projects { 
+  flex: 1; 
+  padding: 20px; 
+  overflow: hidden; 
+} 
+ 
+.slider { 
+  position: relative; 
+  width: 100%; 
+} 
+ 
+.slider-inner { 
+  display: flex; 
+  gap: 20px; 
+  transition: transform 0.5s ease-in-out; 
+} 
+ 
+.project { 
+  flex-shrink: 0; 
+  width: 400px; 
+  padding: 20px; 
+  background-color: #fff; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07); 
+  transition: transform 0.3s; 
+} 
+ 
+.project:hover { 
+  transform: scale(1.02); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+} 
+ 
+.project img { 
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 5px; 
+  cursor: pointer; 
+} 
+ 
+.project-info { 
+  margin-top: 10px; 
+  font-size: 14px; 
+  color: #666; 
+} 
+ 
+.prev, .next { 
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  background-color: transparent; 
+  color: #777; 
+  border: none; 
+  outline: none; 
+  cursor: pointer; 
+  font-size: 32px; 
+  transition: color 0.3s; 
+} 
+ 
+.prev:hover, .next:hover { 
+  color: #333; 
+} 
+ 
+.prev { 
+  left: 20px; 
+} 
+ 
+.next { 
+  right: 20px; 
+} 
+ 
+footer { 
+  background-color: #333; 
+  color: #fff; 
+  padding: 20px 40px; 
+  text-align: center; 
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15); 
+}
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
